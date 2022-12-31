@@ -1,0 +1,10 @@
+data()
+trees
+str(trees)
+summary(trees)
+trees <- trees[!is.na(trees$Height), ]
+install.packages("ggplot2")
+library(ggplot2)
+ggplot2(trees, aes(x=Height, y=Volume)) + geom_point()
+coer=lm(Volume~Height)
+plot(coer)
